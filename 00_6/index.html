@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="header">
+    <header>
+      <div class="title">logo</div>
+      <nav>
+        <ul>
+          <li><a href="">home</a></li>
+          <li><a href="">market</a></li>
+          <li><a href="">forum</a></li>
+          <li><a href="">about</a></li>
+          <li><a href="">contact us</a></li>
+        </ul>
+      </nav>
+      <div id="menu_btn" onclick="menuToggle()"></div>
+    </header>
+    <nav id="responsive_menu">
+      <div id="togl" onclick="menuToggle()"></div>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">market</a></li>
+        <li><a href="">forum</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">contact us</a></li>
+      </ul>
+    </nav>
+    <div class="label">label</div>
+  </section>
+  <section class="info">
+    <div id="block__line"></div>
+    <div class="container">
+      <div class="fl_ct">
+        <div class="item">
+          <div class="title">Lorem ipsum.</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil doloremque quia et, incidunt neque qui autem blanditiis ad perspiciatis ex ut voluptatem quaerat corporis eligendi vero commodi optio ratione, inventore ab aut id
+            possimus.
+            Sequi cupiditate quo velit, laborum possimus, labore magnam harum, voluptate inventore modi alias corporis aperiam fugiat.</p>
+        </div>
+        <div class="item">
+          <div class="title">Lorem ipsum.</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil doloremque quia et, incidunt neque qui autem blanditiis ad perspiciatis ex ut voluptatem quaerat corporis eligendi vero commodi optio ratione, inventore ab aut id
+            possimus.
+            Sequi cupiditate quo velit, laborum possimus, labore magnam harum, voluptate inventore modi alias corporis aperiam fugiat.</p>
+        </div>
+        <div class="item">
+          <div class="title">Lorem ipsum.</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil doloremque quia et, incidunt neque qui autem blanditiis ad perspiciatis ex ut voluptatem quaerat corporis eligendi vero commodi optio ratione, inventore ab aut id
+            possimus.
+            Sequi cupiditate quo velit, laborum possimus, labore magnam harum, voluptate inventore modi alias corporis aperiam fugiat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="photos">
+    <div id="btn_group">
+      <div class="btn btn-1" onclick="moveBackward()">
+        <p>
+          <
+        </p>
+      </div>
+      <div class="btn btn-2" onclick="moveForward()">
+        <p>></p>
+      </div>
+    </div>
+    <img src="picture-1.jpg" class="active" alt="">
+    <img src="picture-2.jpg" alt="">
+    <img src="picture-3.jpg" alt="">
+  </section>
+  <section class="team">
+    <div class="title">Our Team</div>
+    <div class="container">
+
+      <div class="fx_ct">
+        <div class="item">
+          <img src="person.png" alt="">
+          <div class="title">Lorem ipsum.</div>
+          <div class="sub">Lorem ipsum dolor.</div>
+        </div>
+        <div class="item">
+          <img src="person.png" alt="">
+          <div class="title">Lorem ipsum.</div>
+          <div class="sub">Lorem ipsum dolor.</div>
+        </div>
+        <div class="item">
+          <img src="person.png" alt="">
+          <div class="title">Lorem ipsum.</div>
+          <div class="sub">Lorem ipsum dolor.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="label">This is End</div>
+    <div class="bl_vert"></div>
+    <ul>
+      <li><a href="">Other products</a></li>
+      <li><a href="">Order</a></li>
+      <li><a href="">Partners</a></li>
+    </ul>
+  </footer>
+
+  <script type="text/javascript">
+    let index = 0;
+    let images = document.querySelectorAll('.photos img');
+
+    function moveForward() {
+      if (index < images.length-1) {
+        images[++index - 1].classList.remove('active')
+        images[index].classList.add('active')
+      }
+    }
+
+    function moveBackward() {
+      if (index > 0) {
+        images[--index + 1].classList.remove('active')
+        images[index].classList.add('active')
+      }
+    }
+
+
+    function menuToggle() {
+      let nav = document.querySelector('#responsive_menu')
+      nav.classList.toggle('active')
+    }
+  </script>
+</body>
+
+</html>
